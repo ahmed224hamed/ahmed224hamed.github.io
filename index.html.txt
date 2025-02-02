@@ -8,10 +8,5 @@
 <body>
     <h1>Welcome to My Portfolio</h1>
     <p>Hello! I'm <strong>Ahmed Hamed</strong>, a data analyst skilled in Power BI, SQL, and data visualization.</p>
-    
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="retail-sales-insights.html">Retail Sales Insights</a></li>
-    </ul>
 </body>
 </html>
