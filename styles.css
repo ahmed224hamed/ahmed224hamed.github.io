@@ -1,15 +1,179 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #2b3d51; /* Dark blue */
+    color: white;
+    padding: 100px 20px;
     text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.cta-button {
+    background-color: #4CAF50; /* Green for CTA */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* About Section */
+.about-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: -30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    color: #2b3d51;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: #e9f1f7;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 2.5em;
+    color: #2b3d51;
+    margin-bottom: 20px;
+}
+
+.projects-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projects-section li {
+    margin: 15px 0;
+}
+
+.projects-section a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.projects-section a:hover {
+    color: #0056b3;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: -30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skills-section h2 {
+    font-size: 2.5em;
+    color: #2b3d51;
+    margin-bottom: 20px;
+}
+
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-section li {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: -30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    color: #2b3d51;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+.contact-section a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.contact-section a:hover {
+    color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #2b3d51;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+}
+
+footer p {
+    margin: 0;
 }
 
 /* Container */
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 50px auto;
     padding: 20px;
     background: white;
@@ -17,49 +181,25 @@ body {
     border-radius: 8px;
 }
 
-/* Header */
-h1 {
-    color: #333;
-    font-size: 28px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
 
-/* Paragraphs */
-p {
-    font-size: 18px;
-    color: #555;
-}
+    .hero p {
+        font-size: 1.2em;
+    }
 
-/* Project Links */
-ul {
-    list-style: none;
-    padding: 0;
-}
+    .cta-button {
+        font-size: 1em;
+    }
 
-li {
-    margin: 10px 0;
-}
+    .about-section h2, .projects-section h2, .skills-section h2, .contact-section h2 {
+        font-size: 2em;
+    }
 
-a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #007BFF;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-/* Contact Section */
-h2 {
-    margin-top: 30px;
-    color: #222;
-}
-
-/* Footer */
-footer {
-    margin-top: 50px;
-    font-size: 14px;
-    color: #777;
+    .skills-section ul, .contact-section p {
+        font-size: 1em;
+    }
 }
