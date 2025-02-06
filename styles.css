@@ -34,18 +34,17 @@ body {
     font-size: 1.2em;
     margin: 10px;
     display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .download-button {
-    background-color: #007BFF;
+    background-color: #4CAF50; /* Same green as "View My Work" button */
 }
 
-.cta-button:hover {
-    background-color: #45a049;
-}
-
-.download-button:hover {
-    background-color: #0056b3;
+.cta-button:hover, .download-button:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
 }
 
 /* About Section */
@@ -111,3 +110,4 @@ footer {
     color: white;
     padding: 20px;
 }
+
