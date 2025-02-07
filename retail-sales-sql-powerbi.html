@@ -41,13 +41,21 @@
         <section class="screenshots">
             <h2>📸 Dashboard Preview</h2>
             <img src="SQL-Power BI Retail Sales Insights.png" alt="Power BI Dashboard" class="dashboard-img" id="preview-image">
-    
+
             <!-- Modal for Popup -->
             <div id="image-modal" class="modal">
                 <span class="close">&times;</span>
                 <img class="modal-content" id="modal-img">
+                <!-- Zoom Controls -->
+                <div class="zoom-controls">
+                    <button class="zoom-button" id="zoom-in">🔍 Zoom In</button>
+                    <button class="zoom-button" id="zoom-out">🔍 Zoom Out</button>
+                </div>
+                <!-- Download Button -->
+                <button class="download-btn" id="download-img">📥 Download Image</button>
             </div>
         </section>
+
 
 
         <section class="insights">
@@ -70,29 +78,53 @@
         </footer>
     </div>
 <script>
-    // Get modal elements
-    const modal = document.getElementById('image-modal');
-    const modalImg = document.getElementById('modal-img');
-    const closeBtn = document.querySelector('.close');
-    const previewImg = document.getElementById('preview-image');
+// Get modal elements
+const modal = document.getElementById('image-modal');
+const modalImg = document.getElementById('modal-img');
+const closeBtn = document.querySelector('.close');
+const previewImg = document.getElementById('preview-image');
+const zoomInBtn = document.getElementById('zoom-in');
+const zoomOutBtn = document.getElementById('zoom-out');
+const downloadBtn = document.getElementById('download-img');
 
-    // Open modal when image is clicked
-    previewImg.addEventListener('click', () => {
-        modal.style.display = 'block';
-        modalImg.src = previewImg.src; // Set the modal image source
-    });
+// Open modal when image is clicked
+previewImg.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalImg.src = previewImg.src; // Set the modal image source
+});
 
-    // Close modal when 'x' is clicked
-    closeBtn.addEventListener('click', () => {
+// Close modal when 'x' is clicked
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Close modal when clicking anywhere outside the image
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
         modal.style.display = 'none';
-    });
+    }
+});
 
-    // Close modal when clicking anywhere outside the image
-    modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
+// Zoom In functionality
+zoomInBtn.addEventListener('click', () => {
+    modalImg.classList.add('zoom-in');
+    modalImg.classList.remove('zoom-out');
+});
+
+// Zoom Out functionality
+zoomOutBtn.addEventListener('click', () => {
+    modalImg.classList.remove('zoom-in');
+    modalImg.classList.add('zoom-out');
+});
+
+// Download the image
+downloadBtn.addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.href = previewImg.src;
+    link.download = 'RetailSalesDashboard.png'; // Set file name
+    link.click();
+});
+
 </script>
 </body>
 </html>
