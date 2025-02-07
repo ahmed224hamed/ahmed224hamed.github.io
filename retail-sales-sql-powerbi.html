@@ -46,11 +46,6 @@
             <div id="image-modal" class="modal">
                 <span class="close">&times;</span>
                 <img class="modal-content" id="modal-img">
-                <!-- Zoom Controls -->
-                <div class="zoom-controls">
-                    <button class="zoom-button" id="zoom-in">🔍 Zoom In</button>
-                    <button class="zoom-button" id="zoom-out">🔍 Zoom Out</button>
-                </div>
                 <!-- Download Button -->
                 <button class="download-btn" id="download-img">📥 Download Image</button>
             </div>
@@ -103,18 +98,6 @@ modal.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.style.display = 'none';
     }
-});
-
-// Zoom In functionality
-zoomInBtn.addEventListener('click', () => {
-    modalImg.classList.add('zoom-in');
-    modalImg.classList.remove('zoom-out');
-});
-
-// Zoom Out functionality
-zoomOutBtn.addEventListener('click', () => {
-    modalImg.classList.remove('zoom-in');
-    modalImg.classList.add('zoom-out');
 });
 
 // Download the image

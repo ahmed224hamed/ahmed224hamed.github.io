@@ -221,15 +221,6 @@ footer {
     cursor: pointer;
 }
 
-/* Zoom functionality */
-.zoom-in {
-    transform: scale(1.5);
-}
-
-.zoom-out {
-    transform: scale(1);
-}
-
 /* Close Button */
 .close {
     position: absolute;
