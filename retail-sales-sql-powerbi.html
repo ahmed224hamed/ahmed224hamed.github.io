@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retail Sales Analysis - SQL & Power BI</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="container">
@@ -40,10 +40,15 @@
 
         <section class="screenshots">
             <h2>📸 Dashboard Preview</h2>
-            <a href="SQL-Power-BI-Retail-Sales-Insights.png" target="_blank">
-                <img src="SQL-Power BI Retail Sales Insights.png" alt="Power BI Dashboard" class="dashboard-img">
-            </a>
+            <img src="SQL-Power BI Retail Sales Insights.png" alt="Power BI Dashboard" class="dashboard-img" id="preview-image">
+    
+            <!-- Modal for Popup -->
+            <div id="image-modal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal-img">
+            </div>
         </section>
+
 
         <section class="insights">
             <h2>📢 Key Insights</h2>
@@ -64,5 +69,30 @@
             <a href="index.html" class="back-link">⬅ Return to Home</a>
         </footer>
     </div>
+<script>
+    // Get modal elements
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.querySelector('.close');
+    const previewImg = document.getElementById('preview-image');
+
+    // Open modal when image is clicked
+    previewImg.addEventListener('click', () => {
+        modal.style.display = 'block';
+        modalImg.src = previewImg.src; // Set the modal image source
+    });
+
+    // Close modal when 'x' is clicked
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking anywhere outside the image
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>
