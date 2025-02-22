@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Customer Analysis & Statistical Insights (SQL & Power BI)</title>
+    <title>Statistical Analysis & Forecasting Dashboard (Excel, Power Query & DAX)</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header class="project-header">
-            <h1>Advanced Customer Analysis & Statistical Insights</h1>
-            <p class="subtitle">SQL & Power BI | Technical Analysis & Statistical Techniques</p>
+            <h1>Statistical Analysis & Forecasting</h1>
+            <p class="subtitle">Excel, Power Query & DAX | Data-Driven Business Insights</p>
         </header>
 
         <section class="overview">
             <h2>🔍 Project Overview</h2>
-            <p>This project applies advanced technical analysis and statistical techniques using SQL for data manipulation and Power BI for interactive visualization.</p>
+            <p>This project focuses on statistical analysis and forecasting using Excel, Power Query, and DAX to drive strategic decision-making through data modeling and advanced calculations.</p>
         </section>
 
         <section class="tools">
-            <h2>🛠 Tools & Technologies</h2>
+            <h2>📊 Tools & Technologies</h2>
             <ul>
-                <li><strong>SQL:</strong> Data Querying & Transformation</li>
+                <li><strong>Excel:</strong> Data Exploration & Advanced Analysis</li>
                 <li><strong>Power BI:</strong> Statistical Dashboards & Reports</li>
+                <li><strong>Power Query:</strong> Data Transformation & Automation</li>
+                <li><strong>DAX:</strong> Advanced Calculations & Data Modeling</li>
             </ul>
         </section>
 
@@ -31,7 +33,7 @@
             <h2>📁 Project Files</h2>
             <p>Download the key project files below:</p>
             <ul>
-                <li><a href="Ahmed Mohamed Hamed Project 3.zip" download>📊 Power BI Report & Analysis</a></li>
+                <li><a href="Ahmed Mohamed Hamed Project 3.zip" download>📊 Project Dashboard</a></li>
                 <li><a href="3rd_project_summery_report.docx" download>📝 Project Summary Report</a></li>
             </ul>
         </section>
@@ -39,8 +41,8 @@
         <section class="screenshots">
             <h2>📸 Dashboard Preview</h2>
 
-            <h3>📊 Technical Analysis Overview</h3>
-            <img src="3rd_project.png" alt="Technical Analysis Overview" class="dashboard-img preview-image">
+            <h3>📊 Statistical Analysis Dashboard</h3>
+            <img src="3rd_project.png" alt="Statistical Analysis Dashboard" class="dashboard-img preview-image">
 
             <!-- Modal for Popup -->
             <div id="image-modal" class="modal">
@@ -50,46 +52,60 @@
             </div>
         </section>
 
+        <script>
+        // Get modal elements
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        const closeBtn = document.querySelector('.close');
+        const previewImages = document.querySelectorAll('.preview-image');
+        const downloadBtn = document.getElementById('download-img');
+
+        // Open modal when any image is clicked
+        previewImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = img.src;
+            });
+        });
+
+        // Close modal when 'x' is clicked
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Download the image
+        downloadBtn.addEventListener('click', () => {
+            const link = document.createElement('a');
+            link.href = modalImg.src;
+            link.download = modalImg.src.split('/').pop(); // Extract filename
+            link.click();
+        });
+        </script>
+
+        <section class="insights">
+            <h2>📢 Key Insights</h2>
+            <ul>
+                <li>📊 <strong>Statistical Analysis:</strong> Applied advanced statistical techniques to identify trends and patterns.</li>
+                <li>🔮 <strong>Forecasting:</strong> Developed data-driven forecasts to support strategic decision-making.</li>
+                <li>📈 <strong>Business Insights:</strong> Provided actionable recommendations based on data analysis.</li>
+            </ul>
+        </section>
+
+        <section class="conclusion">
+            <h2>📈 Business Impact</h2>
+            <p>By leveraging Excel, Power Query, and DAX, this project helped drive data-informed strategies and improve forecasting accuracy, leading to better business outcomes.</p>
+        </section>
+
         <footer class="project-footer">
             <a href="index.html" class="back-link">⬅ Return to Home</a>
         </footer>
     </div>
-
-<script>
-// Get modal elements
-const modal = document.getElementById('image-modal');
-const modalImg = document.getElementById('modal-img');
-const closeBtn = document.querySelector('.close');
-const previewImages = document.querySelectorAll('.preview-image');
-const downloadBtn = document.getElementById('download-img');
-
-// Open modal when any image is clicked
-previewImages.forEach(img => {
-    img.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        modalImg.src = img.src;
-    });
-});
-
-// Close modal when 'x' is clicked
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-// Close modal when clicking outside the image
-modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-});
-
-// Download the image
-downloadBtn.addEventListener('click', () => {
-    const link = document.createElement('a');
-    link.href = modalImg.src;
-    link.download = modalImg.src.split('/').pop(); // Extract filename
-    link.click();
-});
-</script>
 </body>
 </html>
